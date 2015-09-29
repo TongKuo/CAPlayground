@@ -29,7 +29,7 @@
     [ self setWantsLayer: YES ];
 
     CALayer* hostingLayer = [ CALayer layer ];
-    NSImage* image = [ NSImage imageNamed: @"minions" ];
+    NSImage* image = [ NSImage imageNamed: @"purewiki" ];
     [ hostingLayer setContents: [ image layerContentsForContentsScale: 2.f ] ];
 
     [ self setLayer: hostingLayer ];
