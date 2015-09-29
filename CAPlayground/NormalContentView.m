@@ -12,7 +12,7 @@
 
 - ( void ) awakeFromNib
     {
-    NSImage* image = [ [ NSImage alloc ] initWithContentsOfFile: [ NSHomeDirectory() stringByAppendingString: @"/tmp/minions.jpg" ] ];
+    NSImage* image = [ NSImage imageNamed: @"minions" ];
 
     NSImageView* imageView = [ [ NSImageView alloc ] initWithFrame: NSMakeRect( 0, 0, 50, 50 ) ];
     [ imageView configureForAutoLayout ];
