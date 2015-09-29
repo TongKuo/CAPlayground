@@ -12,7 +12,7 @@
 
 - ( void ) awakeFromNib
     {
-    NSImage* image = [ NSImage imageNamed: @"minions" ];
+    NSImage* image = [ NSImage imageNamed: @"purewiki" ];
 
     NSImageView* imageView = [ [ NSImageView alloc ] initWithFrame: NSMakeRect( 0, 0, 50, 50 ) ];
     [ imageView configureForAutoLayout ];

@@ -21,6 +21,7 @@
 		832336081BBAE04100402420 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 832336021BBAE04100402420 /* NSLayoutConstraint+PureLayout.m */; settings = {ASSET_TAGS = (); }; };
 		8323360B1BBAE07900402420 /* minions.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8323360A1BBAE07900402420 /* minions.jpg */; settings = {ASSET_TAGS = (); }; };
 		8323360D1BBAE12300402420 /* purewiki.png in Resources */ = {isa = PBXBuildFile; fileRef = 8323360C1BBAE12300402420 /* purewiki.png */; settings = {ASSET_TAGS = (); }; };
+		832336101BBB0F1200402420 /* HostingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8323360F1BBB0F1200402420 /* HostingLayer.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		832336051BBAE04100402420 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
 		8323360A1BBAE07900402420 /* minions.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = minions.jpg; sourceTree = "<group>"; };
 		8323360C1BBAE12300402420 /* purewiki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purewiki.png; sourceTree = "<group>"; };
+		8323360E1BBB0F1200402420 /* HostingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HostingLayer.h; sourceTree = "<group>"; };
+		8323360F1BBB0F1200402420 /* HostingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HostingLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +134,8 @@
 				832335EE1BBAD52600402420 /* NormalContentView.m */,
 				832335E51BBACB9700402420 /* LayerHostingContentView.h */,
 				832335E61BBACB9700402420 /* LayerHostingContentView.m */,
+				8323360E1BBB0F1200402420 /* HostingLayer.h */,
+				8323360F1BBB0F1200402420 /* HostingLayer.m */,
 				832335EC1BBACBEE00402420 /* PrefixHeader.pch */,
 				832335BE1BBACB8600402420 /* Assets.xcassets */,
 				832335C01BBACB8600402420 /* MainMenu.xib */,
@@ -324,6 +329,7 @@
 			files = (
 				832336081BBAE04100402420 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				832335BD1BBACB8600402420 /* main.m in Sources */,
+				832336101BBB0F1200402420 /* HostingLayer.m in Sources */,
 				832335EF1BBAD52600402420 /* NormalContentView.m in Sources */,
 				832335E71BBACB9700402420 /* LayerHostingContentView.m in Sources */,
 				832336061BBAE04100402420 /* ALView+PureLayout.m in Sources */,
