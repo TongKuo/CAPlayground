@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		832335BA1BBACB8600402420 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 832335B91BBACB8600402420 /* AppDelegate.m */; };
+		832335BD1BBACB8600402420 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 832335BC1BBACB8600402420 /* main.m */; };
+		832335BF1BBACB8600402420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 832335BE1BBACB8600402420 /* Assets.xcassets */; };
+		832335C21BBACB8600402420 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 832335C01BBACB8600402420 /* MainMenu.xib */; };
+		832335CD1BBACB8600402420 /* CAPlaygroundTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 832335CC1BBACB8600402420 /* CAPlaygroundTests.m */; };
+		832335D81BBACB8600402420 /* CAPlaygroundUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 832335D71BBACB8600402420 /* CAPlaygroundUITests.m */; };
+		832335E71BBACB9700402420 /* LayerHostingContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 832335E61BBACB9700402420 /* LayerHostingContentView.m */; settings = {ASSET_TAGS = (); }; };
+		832335E91BBACBC400402420 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832335E81BBACBC400402420 /* QuartzCore.framework */; };
+		832335EF1BBAD52600402420 /* NormalContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 832335EE1BBAD52600402420 /* NormalContentView.m */; settings = {ASSET_TAGS = (); }; };
+		832335F91BBAD57E00402420 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 832335F11BBAD57E00402420 /* ALView+PureLayout.m */; settings = {ASSET_TAGS = (); }; };
+		832335FA1BBAD57F00402420 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 832335F31BBAD57E00402420 /* NSArray+PureLayout.m */; settings = {ASSET_TAGS = (); }; };
+		832335FB1BBAD57F00402420 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 832335F51BBAD57E00402420 /* NSLayoutConstraint+PureLayout.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		832335C91BBACB8600402420 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 832335AD1BBACB8600402420 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 832335B41BBACB8600402420;
+			remoteInfo = CAPlayground;
+		};
+		832335D41BBACB8600402420 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 832335AD1BBACB8600402420 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 832335B41BBACB8600402420;
+			remoteInfo = CAPlayground;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		832335B51BBACB8600402420 /* CAPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		832335B81BBACB8600402420 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		832335B91BBACB8600402420 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		832335BC1BBACB8600402420 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		832335BE1BBACB8600402420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		832335C11BBACB8600402420 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		832335C31BBACB8600402420 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		832335C81BBACB8600402420 /* CAPlaygroundTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAPlaygroundTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		832335CC1BBACB8600402420 /* CAPlaygroundTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAPlaygroundTests.m; sourceTree = "<group>"; };
+		832335CE1BBACB8600402420 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		832335D31BBACB8600402420 /* CAPlaygroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAPlaygroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		832335D71BBACB8600402420 /* CAPlaygroundUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAPlaygroundUITests.m; sourceTree = "<group>"; };
+		832335D91BBACB8600402420 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		832335E51BBACB9700402420 /* LayerHostingContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = LayerHostingContentView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		832335E61BBACB9700402420 /* LayerHostingContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = LayerHostingContentView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		832335E81BBACBC400402420 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		832335EC1BBACBEE00402420 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		832335ED1BBAD52600402420 /* NormalContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalContentView.h; sourceTree = "<group>"; };
+		832335EE1BBAD52600402420 /* NormalContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalContentView.m; sourceTree = "<group>"; };
+		832335F01BBAD57E00402420 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		832335F11BBAD57E00402420 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		832335F21BBAD57E00402420 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		832335F31BBAD57E00402420 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		832335F41BBAD57E00402420 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		832335F51BBAD57E00402420 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		832335F61BBAD57E00402420 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		832335F71BBAD57E00402420 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		832335F81BBAD57E00402420 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		832335B21BBACB8600402420 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832335E91BBACBC400402420 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832335C51BBACB8600402420 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832335D01BBACB8600402420 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		832335AC1BBACB8600402420 = {
+			isa = PBXGroup;
+			children = (
+				832335F01BBAD57E00402420 /* ALView+PureLayout.h */,
+				832335F11BBAD57E00402420 /* ALView+PureLayout.m */,
+				832335F21BBAD57E00402420 /* NSArray+PureLayout.h */,
+				832335F31BBAD57E00402420 /* NSArray+PureLayout.m */,
+				832335F41BBAD57E00402420 /* NSLayoutConstraint+PureLayout.h */,
+				832335F51BBAD57E00402420 /* NSLayoutConstraint+PureLayout.m */,
+				832335F61BBAD57E00402420 /* PureLayout+Internal.h */,
+				832335F71BBAD57E00402420 /* PureLayout.h */,
+				832335F81BBAD57E00402420 /* PureLayoutDefines.h */,
+				832335E81BBACBC400402420 /* QuartzCore.framework */,
+				832335B71BBACB8600402420 /* CAPlayground */,
+				832335CB1BBACB8600402420 /* CAPlaygroundTests */,
+				832335D61BBACB8600402420 /* CAPlaygroundUITests */,
+				832335B61BBACB8600402420 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		832335B61BBACB8600402420 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				832335B51BBACB8600402420 /* CAPlayground.app */,
+				832335C81BBACB8600402420 /* CAPlaygroundTests.xctest */,
+				832335D31BBACB8600402420 /* CAPlaygroundUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		832335B71BBACB8600402420 /* CAPlayground */ = {
+			isa = PBXGroup;
+			children = (
+				832335B81BBACB8600402420 /* AppDelegate.h */,
+				832335B91BBACB8600402420 /* AppDelegate.m */,
+				832335ED1BBAD52600402420 /* NormalContentView.h */,
+				832335EE1BBAD52600402420 /* NormalContentView.m */,
+				832335E51BBACB9700402420 /* LayerHostingContentView.h */,
+				832335E61BBACB9700402420 /* LayerHostingContentView.m */,
+				832335EC1BBACBEE00402420 /* PrefixHeader.pch */,
+				832335BE1BBACB8600402420 /* Assets.xcassets */,
+				832335C01BBACB8600402420 /* MainMenu.xib */,
+				832335C31BBACB8600402420 /* Info.plist */,
+				832335BB1BBACB8600402420 /* Supporting Files */,
+			);
+			path = CAPlayground;
+			sourceTree = "<group>";
+		};
+		832335BB1BBACB8600402420 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				832335BC1BBACB8600402420 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		832335CB1BBACB8600402420 /* CAPlaygroundTests */ = {
+			isa = PBXGroup;
+			children = (
+				832335CC1BBACB8600402420 /* CAPlaygroundTests.m */,
+				832335CE1BBACB8600402420 /* Info.plist */,
+			);
+			path = CAPlaygroundTests;
+			sourceTree = "<group>";
+		};
+		832335D61BBACB8600402420 /* CAPlaygroundUITests */ = {
+			isa = PBXGroup;
+			children = (
+				832335D71BBACB8600402420 /* CAPlaygroundUITests.m */,
+				832335D91BBACB8600402420 /* Info.plist */,
+			);
+			path = CAPlaygroundUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		832335B41BBACB8600402420 /* CAPlayground */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 832335DC1BBACB8600402420 /* Build configuration list for PBXNativeTarget "CAPlayground" */;
+			buildPhases = (
+				832335B11BBACB8600402420 /* Sources */,
+				832335B21BBACB8600402420 /* Frameworks */,
+				832335B31BBACB8600402420 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CAPlayground;
+			productName = CAPlayground;
+			productReference = 832335B51BBACB8600402420 /* CAPlayground.app */;
+			productType = "com.apple.product-type.application";
+		};
+		832335C71BBACB8600402420 /* CAPlaygroundTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 832335DF1BBACB8600402420 /* Build configuration list for PBXNativeTarget "CAPlaygroundTests" */;
+			buildPhases = (
+				832335C41BBACB8600402420 /* Sources */,
+				832335C51BBACB8600402420 /* Frameworks */,
+				832335C61BBACB8600402420 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				832335CA1BBACB8600402420 /* PBXTargetDependency */,
+			);
+			name = CAPlaygroundTests;
+			productName = CAPlaygroundTests;
+			productReference = 832335C81BBACB8600402420 /* CAPlaygroundTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		832335D21BBACB8600402420 /* CAPlaygroundUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 832335E21BBACB8600402420 /* Build configuration list for PBXNativeTarget "CAPlaygroundUITests" */;
+			buildPhases = (
+				832335CF1BBACB8600402420 /* Sources */,
+				832335D01BBACB8600402420 /* Frameworks */,
+				832335D11BBACB8600402420 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				832335D51BBACB8600402420 /* PBXTargetDependency */,
+			);
+			name = CAPlaygroundUITests;
+			productName = CAPlaygroundUITests;
+			productReference = 832335D31BBACB8600402420 /* CAPlaygroundUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		832335AD1BBACB8600402420 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Tong Kuo";
+				TargetAttributes = {
+					832335B41BBACB8600402420 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					832335C71BBACB8600402420 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 832335B41BBACB8600402420;
+					};
+					832335D21BBACB8600402420 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 832335B41BBACB8600402420;
+					};
+				};
+			};
+			buildConfigurationList = 832335B01BBACB8600402420 /* Build configuration list for PBXProject "CAPlayground" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 832335AC1BBACB8600402420;
+			productRefGroup = 832335B61BBACB8600402420 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				832335B41BBACB8600402420 /* CAPlayground */,
+				832335C71BBACB8600402420 /* CAPlaygroundTests */,
+				832335D21BBACB8600402420 /* CAPlaygroundUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		832335B31BBACB8600402420 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832335BF1BBACB8600402420 /* Assets.xcassets in Resources */,
+				832335C21BBACB8600402420 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832335C61BBACB8600402420 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832335D11BBACB8600402420 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		832335B11BBACB8600402420 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832335FB1BBAD57F00402420 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				832335BD1BBACB8600402420 /* main.m in Sources */,
+				832335EF1BBAD52600402420 /* NormalContentView.m in Sources */,
+				832335E71BBACB9700402420 /* LayerHostingContentView.m in Sources */,
+				832335F91BBAD57E00402420 /* ALView+PureLayout.m in Sources */,
+				832335FA1BBAD57F00402420 /* NSArray+PureLayout.m in Sources */,
+				832335BA1BBACB8600402420 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832335C41BBACB8600402420 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832335CD1BBACB8600402420 /* CAPlaygroundTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		832335CF1BBACB8600402420 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				832335D81BBACB8600402420 /* CAPlaygroundUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		832335CA1BBACB8600402420 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 832335B41BBACB8600402420 /* CAPlayground */;
+			targetProxy = 832335C91BBACB8600402420 /* PBXContainerItemProxy */;
+		};
+		832335D51BBACB8600402420 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 832335B41BBACB8600402420 /* CAPlayground */;
+			targetProxy = 832335D41BBACB8600402420 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		832335C01BBACB8600402420 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				832335C11BBACB8600402420 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		832335DA1BBACB8600402420 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		832335DB1BBACB8600402420 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		832335DD1BBACB8600402420 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CAPlayground/PrefixHeader.pch;
+				INFOPLIST_FILE = CAPlayground/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.CAPlayground;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		832335DE1BBACB8600402420 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = CAPlayground/PrefixHeader.pch;
+				INFOPLIST_FILE = CAPlayground/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.CAPlayground;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		832335E01BBACB8600402420 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CAPlaygroundTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.CAPlaygroundTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAPlayground.app/Contents/MacOS/CAPlayground";
+			};
+			name = Debug;
+		};
+		832335E11BBACB8600402420 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CAPlaygroundTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.CAPlaygroundTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAPlayground.app/Contents/MacOS/CAPlayground";
+			};
+			name = Release;
+		};
+		832335E31BBACB8600402420 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CAPlaygroundUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.CAPlaygroundUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CAPlayground;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		832335E41BBACB8600402420 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CAPlaygroundUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = home.bedroom.TongKuo.CAPlaygroundUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CAPlayground;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		832335B01BBACB8600402420 /* Build configuration list for PBXProject "CAPlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				832335DA1BBACB8600402420 /* Debug */,
+				832335DB1BBACB8600402420 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		832335DC1BBACB8600402420 /* Build configuration list for PBXNativeTarget "CAPlayground" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				832335DD1BBACB8600402420 /* Debug */,
+				832335DE1BBACB8600402420 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		832335DF1BBACB8600402420 /* Build configuration list for PBXNativeTarget "CAPlaygroundTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				832335E01BBACB8600402420 /* Debug */,
+				832335E11BBACB8600402420 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		832335E21BBACB8600402420 /* Build configuration list for PBXNativeTarget "CAPlaygroundUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				832335E31BBACB8600402420 /* Debug */,
+				832335E41BBACB8600402420 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 832335AD1BBACB8600402420 /* Project object */;
+}

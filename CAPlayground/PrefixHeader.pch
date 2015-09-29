@@ -1,0 +1,17 @@
+//
+//  PrefixHeader.pch
+//  CAPlayground
+//
+//  Created by Tong G. on 9/29/15.
+//  Copyright © 2015 Tong Kuo. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+@import Cocoa;
+@import QuartzCore;
+
+#import "PureLayout.h"
+
+#endif /* PrefixHeader_pch */
