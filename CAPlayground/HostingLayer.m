@@ -13,12 +13,15 @@
 - ( instancetype ) init
     {
     if ( self = [ super init ] )
+        {
         [ self setContentsScale: 2.f ];
+        self.contentsGravity = kCAGravityResizeAspectFill;
+        }
 
     return self;
     }
 
-#if 0
+#if 1
 - ( void ) display
     {
     NSImage* image = [ NSImage imageNamed: @"purewiki" ];
@@ -26,7 +29,7 @@
     }
 #endif
 
-#if 1
+#if 0
 - ( void ) drawInContext: ( CGContextRef )_Ctx
     {
     CGMutablePathRef cgPath = CGPathCreateMutable();

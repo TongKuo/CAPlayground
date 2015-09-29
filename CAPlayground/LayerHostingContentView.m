@@ -54,4 +54,13 @@
     return YES;
     }
 
+- ( BOOL )               layer: ( CALayer* )_Layer
+    shouldInheritContentsScale: ( CGFloat )_NewScale
+                    fromWindow: ( NSWindow* )_Window
+    {
+    NSLog( @"%g vs. %g", self.layer.contentsScale, _NewScale );
+
+    return YES;
+    }
+
 @end
