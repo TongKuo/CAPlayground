@@ -37,16 +37,16 @@
 
 - ( IBAction ) animateAction: ( id )_Sender
     {
-    CABasicAnimation* basicAnim = [ CABasicAnimation animationWithKeyPath: @"hidden" ];
-    [ basicAnim setFromValue: @( NO ) ];
-    [ basicAnim setToValue: @( YES ) ];
+    CABasicAnimation* basicAnim = [ CABasicAnimation animationWithKeyPath: @"cornerRadius" ];
+    [ basicAnim setFromValue: @0.f ];
+    [ basicAnim setToValue: @200.f ];
     [ basicAnim setDuration: 6.f ];
-    [ self.layer addAnimation: basicAnim forKey: @"hidden" ];
+    [ self.layer addAnimation: basicAnim forKey: @"cornerRadius" ];
 
-    [ self.layer setHidden: YES ];
+    [ self.layer setCornerRadius: 200.f ];
 
-    NSLog( @"Layer in Model Tree: %d", self.layer.hidden );
-    NSLog( @"Layer in Presentation Tree: %d", [ ( CALayer* )self.layer.presentationLayer isHidden ] );
+    NSLog( @"Layer in Model Tree: %g", self.layer.cornerRadius );
+    NSLog( @"Layer in Presentation Tree: %g", [ ( CALayer* )self.layer.presentationLayer cornerRadius ] );
     }
 
 - ( BOOL ) mouseDownCanMoveWindow
