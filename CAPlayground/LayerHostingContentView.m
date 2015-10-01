@@ -13,7 +13,7 @@
 @implementation LayerHostingContentView
     {
     ImageLayer* __imageLayer__pureWiki;
-    ImageLayer* __imageLayer_minions;
+    ImageLayer* __imageLayer__minions;
     }
 
 - ( void ) viewDidMoveToSuperview
@@ -35,18 +35,46 @@
     {
     HostingLayer* hostingLayer = [ HostingLayer layer ];
     [ hostingLayer setDelegate: self ];
+    [ hostingLayer setSpeed: .5f ];
 
     self->__imageLayer__pureWiki = [ [ ImageLayer alloc ] initWithImage: [ NSImage imageNamed: @"purewiki" ] ];
-    [ self->__imageLayer__pureWiki setPosition: NSMakePoint( 300, 100 ) ];
-    [ self->__imageLayer__pureWiki setBounds: CGRectMake( 0, 0, 460, 290 ) ];
-    [ self->__imageLayer__pureWiki setAnchorPoint: NSMakePoint( 0.f, 0.f ) ];
+//    [ self->__imageLayer__pureWiki setPosition: NSMakePoint( 300, 100 ) ];
+//    [ self->__imageLayer__pureWiki setBounds: CGRectMake( 0, 0, 460, 290 ) ];
+//    [ self->__imageLayer__pureWiki setAnchorPoint: NSMakePoint( 0.f, 0.f ) ];
     [ hostingLayer addSublayer: self->__imageLayer__pureWiki ];
+    [ self->__imageLayer__pureWiki setSpeed: .5f ];
 
-    self->__imageLayer_minions = [ [ ImageLayer alloc ] initWithImage: [ NSImage imageNamed: @"minions" ] ];
-    [ self->__imageLayer_minions setPosition: NSMakePoint( 400, 50 ) ];
-    [ self->__imageLayer_minions setBounds: CGRectMake( 0, 0, 460, 300 ) ];
-    [ self->__imageLayer_minions setAnchorPoint: NSMakePoint( 0.f, 0.f ) ];
-    [ hostingLayer addSublayer: self->__imageLayer_minions ];
+    self->__imageLayer__minions = [ [ ImageLayer alloc ] initWithImage: [ NSImage imageNamed: @"minions" ] ];
+//    [ self->__imageLayer__minions setPosition: NSMakePoint( 400, 50 ) ];
+//    [ self->__imageLayer__minions setBounds: CGRectMake( 0, 0, 460, 300 ) ];
+//    [ self->__imageLayer__minions setAnchorPoint: NSMakePoint( 0.f, 0.f ) ];
+    [ hostingLayer addSublayer: self->__imageLayer__minions ];
+
+    [ hostingLayer setLayoutManager: [ CAConstraintLayoutManager layoutManager ] ];
+
+    [ self->__imageLayer__pureWiki addConstraint:
+        [ CAConstraint constraintWithAttribute: kCAConstraintWidth relativeTo: @"superlayer" attribute: kCAConstraintWidth scale: .4f offset: 0.f ] ];
+
+    [ self->__imageLayer__pureWiki addConstraint:
+        [ CAConstraint constraintWithAttribute: kCAConstraintHeight relativeTo: @"superlayer" attribute: kCAConstraintHeight scale: .4f offset: 0.f ] ];
+
+    [ self->__imageLayer__minions addConstraint:
+        [ CAConstraint constraintWithAttribute: kCAConstraintWidth relativeTo: @"superlayer" attribute: kCAConstraintWidth scale: .4f offset: 0.f ] ];
+
+    [ self->__imageLayer__minions addConstraint:
+        [ CAConstraint constraintWithAttribute: kCAConstraintHeight relativeTo: @"superlayer" attribute: kCAConstraintHeight scale: .4f offset: 0.f ] ];
+
+    [ self->__imageLayer__pureWiki addConstraint:
+        [ CAConstraint constraintWithAttribute: kCAConstraintMidX relativeTo: @"superlayer" attribute: kCAConstraintMidX ] ];
+
+    [ self->__imageLayer__pureWiki addConstraint:
+        [ CAConstraint constraintWithAttribute: kCAConstraintMidY relativeTo: @"superlayer" attribute: kCAConstraintMidY ] ];
+
+    [ self->__imageLayer__minions addConstraint:
+        [ CAConstraint constraintWithAttribute: kCAConstraintMidX relativeTo: @"purewiki" attribute: kCAConstraintMidX offset: 50.f ] ];
+
+    [ self->__imageLayer__minions addConstraint:
+        [ CAConstraint constraintWithAttribute: kCAConstraintMidY relativeTo: @"purewiki" attribute: kCAConstraintMidY offset: -50.f ] ];
 
     [ self setLayer: hostingLayer ];
     [ self setWantsLayer: YES ];
@@ -95,8 +123,13 @@
     [ contentsRectAnim setKeyTimes: @[ @0.f, @0.1, @.2, @.3, @1.f ] ];
     [ contentsRectAnim setDuration: 10.f ];
     [ contentsRectAnim setCalculationMode: kCAAnimationLinear ];
-    [ self.layer addAnimation: contentsRectAnim forKey: @"contentsRect" ];
-    [ self.layer setContentsRect: NSMakeRect( .5f, .5f, .5f, .5f ) ];
+
+    [ self->__imageLayer__pureWiki addAnimation: contentsRectAnim forKey: @"contentsRect" ];
+    [ self->__imageLayer__pureWiki setContentsRect: NSMakeRect( .5f, .5f, .5f, .5f ) ];
+
+    [ self->__imageLayer__minions addAnimation: contentsRectAnim forKey: @"contentsRect" ];
+    [ self->__imageLayer__minions setContentsRect: NSMakeRect( .5f, .5f, .5f, .5f ) ];
+
 //
 //    NSLog( @"Layer Tree: Opacity( %g ) vs. Corner Radius( %g )", self.layer.opacity, self.layer.cornerRadius );
 //

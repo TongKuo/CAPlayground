@@ -24,6 +24,8 @@
         [ self setContents: [ self->__image layerContentsForContentsScale: 2.f ] ];
 
         [ self setNeedsDisplay ];
+        [ self setName: _Image.name ];
+        [ self setContentsGravity: kCAGravityResizeAspect ];
         }
 
     return self;
