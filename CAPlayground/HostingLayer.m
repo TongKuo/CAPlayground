@@ -25,7 +25,7 @@
     return self;
     }
 
-#if 1
+#if 0
 - ( void ) display
     {
     NSLog( @"Redrawing…" );
