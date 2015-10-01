@@ -28,6 +28,7 @@
 #if 1
 - ( void ) display
     {
+    NSLog( @"Redrawing…" );
     NSImage* image = [ NSImage imageNamed: @"purewiki" ];
     [ self setContents: [ image layerContentsForContentsScale: 2.f ] ];
     }

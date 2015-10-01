@@ -17,6 +17,8 @@
 
 - ( void ) awakeFromNib
     {
+    self.window.opaque = NO;
+    self.window.backgroundColor = [ NSColor clearColor ];
     }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
