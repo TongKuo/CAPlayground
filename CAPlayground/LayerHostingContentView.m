@@ -38,16 +38,10 @@
     [ hostingLayer setSpeed: .5f ];
 
     self->__imageLayer__pureWiki = [ [ ImageLayer alloc ] initWithImage: [ NSImage imageNamed: @"purewiki" ] ];
-//    [ self->__imageLayer__pureWiki setPosition: NSMakePoint( 300, 100 ) ];
-//    [ self->__imageLayer__pureWiki setBounds: CGRectMake( 0, 0, 460, 290 ) ];
-//    [ self->__imageLayer__pureWiki setAnchorPoint: NSMakePoint( 0.f, 0.f ) ];
     [ hostingLayer addSublayer: self->__imageLayer__pureWiki ];
     [ self->__imageLayer__pureWiki setSpeed: .5f ];
 
     self->__imageLayer__minions = [ [ ImageLayer alloc ] initWithImage: [ NSImage imageNamed: @"minions" ] ];
-//    [ self->__imageLayer__minions setPosition: NSMakePoint( 400, 50 ) ];
-//    [ self->__imageLayer__minions setBounds: CGRectMake( 0, 0, 460, 300 ) ];
-//    [ self->__imageLayer__minions setAnchorPoint: NSMakePoint( 0.f, 0.f ) ];
     [ hostingLayer addSublayer: self->__imageLayer__minions ];
 
     [ hostingLayer setLayoutManager: [ CAConstraintLayoutManager layoutManager ] ];
@@ -78,7 +72,9 @@
 
     [ self setLayer: hostingLayer ];
     [ self setWantsLayer: YES ];
-    [ self.layer setNeedsDisplay ];
+
+    CGPoint cgPoint = CGPointMake( 10.f, 10.f );
+    NSLog( @"%@", NSStringFromPoint( [ self->__imageLayer__pureWiki convertPoint: cgPoint toLayer: self->__imageLayer__minions ] ) );
     }
 
 - ( IBAction ) animateAction: ( id )_Sender
