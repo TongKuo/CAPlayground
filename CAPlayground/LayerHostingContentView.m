@@ -14,21 +14,8 @@
     {
     ImageLayer* __imageLayer__pureWiki;
     ImageLayer* __imageLayer__minions;
-    }
-
-- ( void ) viewDidMoveToSuperview
-    {
-    NSButton* animateButton = [ [ NSButton alloc ] initWithFrame: NSMakeRect( 0.f, 0.f, 30.f, 50.f ) ];
-    [ animateButton setBezelStyle: NSTexturedRoundedBezelStyle ];
-    [ animateButton setTitle: @"Animate" ];
-    [ animateButton setTarget: self ];
-    [ animateButton setAction: @selector( animateAction: ) ];
-
-    [ animateButton configureForAutoLayout ];
-    [ self addSubview: animateButton ];
-
-    [ animateButton autoAlignAxis: ALAxisHorizontal toSameAxisOfView: self ];
-    [ animateButton autoAlignAxis: ALAxisVertical toSameAxisOfView: self ];
+    ImageLayer* __imageLayer__rango;
+    ImageLayer* __imageLayer__jobs;
     }
 
 - ( void ) awakeFromNib
@@ -37,11 +24,12 @@
     [ hostingLayer setDelegate: self ];
     [ hostingLayer setSpeed: .5f ];
 
-    self->__imageLayer__pureWiki = [ [ ImageLayer alloc ] initWithImage: [ NSImage imageNamed: @"purewiki" ] ];
+    // Testing Basic Animations
+    self->__imageLayer__pureWiki = [ [ ImageLayer alloc ] initWithImage: [ NSImage imageNamed: @"purewiki" ] frame: NSZeroRect ];
     [ hostingLayer addSublayer: self->__imageLayer__pureWiki ];
     [ self->__imageLayer__pureWiki setSpeed: .5f ];
 
-    self->__imageLayer__minions = [ [ ImageLayer alloc ] initWithImage: [ NSImage imageNamed: @"minions" ] ];
+    self->__imageLayer__minions = [ [ ImageLayer alloc ] initWithImage: [ NSImage imageNamed: @"minions" ] frame: NSZeroRect ];
     [ hostingLayer addSublayer: self->__imageLayer__minions ];
 
     [ hostingLayer setLayoutManager: [ CAConstraintLayoutManager layoutManager ] ];
@@ -72,9 +60,15 @@
 
     [ self setLayer: hostingLayer ];
     [ self setWantsLayer: YES ];
+    [ self.layer setSpeed: 1.f ];
 
-    CGPoint cgPoint = CGPointMake( 10.f, 10.f );
-    NSLog( @"%@", NSStringFromPoint( [ self->__imageLayer__pureWiki convertPoint: cgPoint toLayer: self->__imageLayer__minions ] ) );
+    // Testing Transition Animations
+    self->__imageLayer__rango = [ [ ImageLayer alloc ] initWithImage: [ NSImage imageNamed: @"rango" ] frame: NSMakeRect( 0, 0, 200, 100 ) ];
+    [ self.layer addSublayer: self->__imageLayer__rango ];
+
+    self->__imageLayer__jobs = [ [ ImageLayer alloc ] initWithImage: [ NSImage imageNamed: @"jobs" ] frame: NSMakeRect( 0, 0, 200, 100 ) ];
+    [ self.layer addSublayer: self->__imageLayer__jobs ];
+    [ self->__imageLayer__jobs setHidden: YES ];
     }
 
 - ( IBAction ) animateAction: ( id )_Sender
@@ -133,6 +127,23 @@
 //    NSLog( @"Presentation Tree: Opacity( %g ) vs. Corner Radius( %g )", presLayer.opacity, presLayer.cornerRadius );
 
 //    [ NSTimer scheduledTimerWithTimeInterval: .2f target: self selector: @selector( __printPresentationLayer: ) userInfo: nil repeats: YES ];
+    }
+
+- ( IBAction ) slideIOAction: ( id )_Sender
+    {
+    CATransition* slideIOTransition = [ CATransition animation ];
+    [ slideIOTransition setType: kCATransitionPush ];
+    [ slideIOTransition setSubtype: kCATransitionFromRight ];
+    [ slideIOTransition setDuration: 1.f ];
+    [ slideIOTransition setStartProgress: 0.f ];
+    [ slideIOTransition setEndProgress: 1.f ];
+
+    [ self->__imageLayer__rango addAnimation: slideIOTransition forKey: @"transition" ];
+    [ self->__imageLayer__jobs addAnimation: slideIOTransition forKey: @"transition" ];
+
+    BOOL yesOrNo = self->__imageLayer__rango.hidden;
+    [ self->__imageLayer__rango setHidden: !yesOrNo ];
+    [ self->__imageLayer__jobs setHidden: yesOrNo ];
     }
 
 - ( void ) __printPresentationLayer: ( NSTimer* )_Timer

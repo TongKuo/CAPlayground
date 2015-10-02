@@ -17,6 +17,7 @@
     }
 
 - ( instancetype ) initWithImage: ( NSImage* )_Image
+                           frame: ( NSRect )_Frame
     {
     if ( self = [ super init ] )
         {
@@ -25,7 +26,11 @@
 
         [ self setNeedsDisplay ];
         [ self setName: _Image.name ];
-        [ self setContentsGravity: kCAGravityResizeAspect ];
+//        [ self setContentsGravity: kCAGravityResizeAspect ];
+
+        [ self setAnchorPoint: NSMakePoint( 0.f, 0.f ) ];
+        [ self setPosition: _Frame.origin ];
+        [ self setBounds: NSMakeRect( 0.f, 0.f, NSWidth( _Frame ), NSHeight( _Frame ) ) ];
         }
 
     return self;

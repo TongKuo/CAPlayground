@@ -16,10 +16,6 @@
         {
         self.contentsScale = 2.f;
         self.contentsGravity = kCAGravityResizeAspectFill;
-
-        self.shadowColor = [ NSColor blackColor ].CGColor;
-        self.shadowOffset = CGSizeMake( 2.f, -3.f );
-        self.shadowOpacity = .5f;
         }
 
     return self;

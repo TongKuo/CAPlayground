@@ -14,6 +14,6 @@
     NSImage __strong* __image;
     }
 
-- ( instancetype ) initWithImage: ( NSImage* )_Image;
+- ( instancetype ) initWithImage: ( NSImage* )_Image frame: ( NSRect )_Frame;
 
 @end
