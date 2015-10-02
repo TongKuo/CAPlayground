@@ -131,19 +131,27 @@
 
 - ( IBAction ) slideIOAction: ( id )_Sender
     {
+    BOOL yesOrNo = self->__imageLayer__rango.hidden;
+
     CATransition* slideIOTransition = [ CATransition animation ];
-    [ slideIOTransition setType: kCATransitionPush ];
-    [ slideIOTransition setSubtype: kCATransitionFromRight ];
-    [ slideIOTransition setDuration: 1.f ];
+    [ slideIOTransition setType: yesOrNo ? kCATransitionMoveIn : kCATransitionReveal ];
+    [ slideIOTransition setSubtype: yesOrNo ? kCATransitionFromRight : kCATransitionFromLeft ];
+    [ slideIOTransition setDuration: .5f ];
     [ slideIOTransition setStartProgress: 0.f ];
     [ slideIOTransition setEndProgress: 1.f ];
 
-    [ self->__imageLayer__rango addAnimation: slideIOTransition forKey: @"transition" ];
-    [ self->__imageLayer__jobs addAnimation: slideIOTransition forKey: @"transition" ];
+//    CATransition* slideIOTransition1 = [ CATransition animation ];
+//    [ slideIOTransition1 setType: kCATransitionPush ];
+//    [ slideIOTransition1 setSubtype: kCATransitionFromRight ];
+//    [ slideIOTransition1 setDuration: 1.f ];
+//    [ slideIOTransition1 setStartProgress: 0.f ];
+//    [ slideIOTransition1 setEndProgress: 1.f ];
 
-    BOOL yesOrNo = self->__imageLayer__rango.hidden;
     [ self->__imageLayer__rango setHidden: !yesOrNo ];
     [ self->__imageLayer__jobs setHidden: yesOrNo ];
+
+    [ self->__imageLayer__rango addAnimation: slideIOTransition forKey: @"transition" ];
+    [ self->__imageLayer__jobs addAnimation: slideIOTransition forKey: @"transition" ];
     }
 
 - ( void ) __printPresentationLayer: ( NSTimer* )_Timer
