@@ -712,6 +712,16 @@
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D4t-3A-8eI">
+                        <rect key="frame" x="105" y="507" width="135" height="32"/>
+                        <buttonCell key="cell" type="push" title="Remove Layers" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qQA-08-2yK">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="removeLayersAction:" target="EiT-Mj-1SZ" id="uSX-NJ-edI"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <point key="canvasLocation" x="281" y="421"/>
