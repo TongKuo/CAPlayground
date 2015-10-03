@@ -686,14 +686,31 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pqs-CW-txR">
-                        <rect key="frame" x="105" y="540" width="94" height="32"/>
-                        <buttonCell key="cell" type="push" title="Slide I/O" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hBI-Gx-ell">
+                        <rect key="frame" x="105" y="540" width="212" height="32"/>
+                        <buttonCell key="cell" type="push" title="Slide I/O with Std Transition" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hBI-Gx-ell">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="slideIOAction:" target="EiT-Mj-1SZ" id="eYu-Ki-A9M"/>
+                            <action selector="slideIOActionWithStandardTransition:" target="EiT-Mj-1SZ" id="eYu-Ki-A9M"/>
                         </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ioh-gc-hFB">
+                        <rect key="frame" x="317" y="540" width="155" height="32"/>
+                        <buttonCell key="cell" type="push" title="Timing Playground" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iSh-YI-tki">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="timingPlaygroundAction:" target="EiT-Mj-1SZ" id="IrX-7V-4oR"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fw9-ST-sXh">
+                        <rect key="frame" x="14" y="507" width="91" height="32"/>
+                        <buttonCell key="cell" type="push" title="Pause" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gt7-sg-Zi5">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
                     </button>
                 </subviews>
             </view>

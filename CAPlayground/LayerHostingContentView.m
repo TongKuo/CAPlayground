@@ -114,11 +114,11 @@
     [ contentsRectAnim setDuration: 10.f ];
     [ contentsRectAnim setCalculationMode: kCAAnimationLinear ];
 
-    [ self->__imageLayer__pureWiki addAnimation: contentsRectAnim forKey: @"contentsRect" ];
     [ self->__imageLayer__pureWiki setContentsRect: NSMakeRect( .5f, .5f, .5f, .5f ) ];
+    [ self->__imageLayer__pureWiki addAnimation: contentsRectAnim forKey: @"contentsRect" ];
 
-    [ self->__imageLayer__minions addAnimation: contentsRectAnim forKey: @"contentsRect" ];
     [ self->__imageLayer__minions setContentsRect: NSMakeRect( .5f, .5f, .5f, .5f ) ];
+    [ self->__imageLayer__minions addAnimation: contentsRectAnim forKey: @"contentsRect" ];
 
 //
 //    NSLog( @"Layer Tree: Opacity( %g ) vs. Corner Radius( %g )", self.layer.opacity, self.layer.cornerRadius );
@@ -126,32 +126,55 @@
 //    CALayer* presLayer = ( CALayer* )self.layer.presentationLayer;
 //    NSLog( @"Presentation Tree: Opacity( %g ) vs. Corner Radius( %g )", presLayer.opacity, presLayer.cornerRadius );
 
-//    [ NSTimer scheduledTimerWithTimeInterval: .2f target: self selector: @selector( __printPresentationLayer: ) userInfo: nil repeats: YES ];
+    [ NSTimer scheduledTimerWithTimeInterval: .2f target: self selector: @selector( __printPresentationLayer: ) userInfo: nil repeats: YES ];
     }
 
-- ( IBAction ) slideIOAction: ( id )_Sender
+- ( void ) pauseLayer: ( CALayer* )_Layer
+    {
+    CFTimeInterval pausedTime = [ _Layer convertTime: CACurrentMediaTime() fromLayer: nil ];
+    [ _Layer setSpeed: 0.f ];
+    [ _Layer setTimeOffset: pausedTime ];
+    }
+
+- ( void ) resumeLayer: ( CALayer* )_Layer
+    {
+    CFTimeInterval pausedTime = [ _Layer timeOffset ];
+
+    [ _Layer setSpeed: 1.f ];
+    [ _Layer setTimeOffset: 0.f ];
+    [ _Layer setBeginTime: 0.f ];
+
+    CFTimeInterval timeSincePause = [ _Layer convertTime: CACurrentMediaTime() fromLayer: nil ] - pausedTime;
+    [ _Layer setBeginTime: timeSincePause ];
+    }
+
+- ( IBAction ) slideIOActionWithStandardTransition: ( id )_Sender
     {
     BOOL yesOrNo = self->__imageLayer__rango.hidden;
 
     CATransition* slideIOTransition = [ CATransition animation ];
-    [ slideIOTransition setType: yesOrNo ? kCATransitionMoveIn : kCATransitionReveal ];
-    [ slideIOTransition setSubtype: yesOrNo ? kCATransitionFromRight : kCATransitionFromLeft ];
+    [ slideIOTransition setType: yesOrNo ? kCATransitionReveal : kCATransitionMoveIn ];
+    [ slideIOTransition setSubtype: yesOrNo ? kCATransitionFromLeft : kCATransitionFromRight ];
     [ slideIOTransition setDuration: .5f ];
     [ slideIOTransition setStartProgress: 0.f ];
     [ slideIOTransition setEndProgress: 1.f ];
 
-//    CATransition* slideIOTransition1 = [ CATransition animation ];
-//    [ slideIOTransition1 setType: kCATransitionPush ];
-//    [ slideIOTransition1 setSubtype: kCATransitionFromRight ];
-//    [ slideIOTransition1 setDuration: 1.f ];
-//    [ slideIOTransition1 setStartProgress: 0.f ];
-//    [ slideIOTransition1 setEndProgress: 1.f ];
+    [ slideIOTransition setFillMode: kCAFillModeBackwards ];
 
     [ self->__imageLayer__rango setHidden: !yesOrNo ];
     [ self->__imageLayer__jobs setHidden: yesOrNo ];
 
     [ self->__imageLayer__rango addAnimation: slideIOTransition forKey: @"transition" ];
     [ self->__imageLayer__jobs addAnimation: slideIOTransition forKey: @"transition" ];
+    }
+
+- ( IBAction ) timingPlaygroundAction: ( id )_Sender
+    {
+    [ self.layer setSpeed: 1.f ];
+    CFTimeInterval currentAbsoluteTime = CACurrentMediaTime();
+    CFTimeInterval localLayerTime = [ self.layer convertTime: currentAbsoluteTime fromLayer: nil ];
+
+    NSLog( @"%g vs. %g", currentAbsoluteTime, localLayerTime );
     }
 
 - ( void ) __printPresentationLayer: ( NSTimer* )_Timer
